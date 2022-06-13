@@ -1,0 +1,477 @@
+Microsoft Windows [Versión 10.0.19044.1706]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\antoniodavid.moreno>C:/Spark3/bin/run-example JavaWordCount C:/Spark3/README.md
+22/06/08 13:11:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/06/08 13:11:39 INFO SparkContext: Running Spark version 3.0.3
+22/06/08 13:11:39 INFO ResourceUtils: ==============================================================
+22/06/08 13:11:39 INFO ResourceUtils: Resources for spark.driver:
+
+22/06/08 13:11:39 INFO ResourceUtils: ==============================================================
+22/06/08 13:11:39 INFO SparkContext: Submitted application: JavaWordCount
+22/06/08 13:11:39 INFO SecurityManager: Changing view acls to: antoniodavid.moreno
+22/06/08 13:11:39 INFO SecurityManager: Changing modify acls to: antoniodavid.moreno
+22/06/08 13:11:39 INFO SecurityManager: Changing view acls groups to:
+22/06/08 13:11:39 INFO SecurityManager: Changing modify acls groups to:
+22/06/08 13:11:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(antoniodavid.moreno); groups with view permissions: Set(); users  with modify permissions: Set(antoniodavid.moreno); groups with modify permissions: Set()
+22/06/08 13:11:40 INFO Utils: Successfully started service 'sparkDriver' on port 53137.
+22/06/08 13:11:40 INFO SparkEnv: Registering MapOutputTracker
+22/06/08 13:11:40 INFO SparkEnv: Registering BlockManagerMaster
+22/06/08 13:11:40 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/06/08 13:11:40 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/06/08 13:11:40 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/06/08 13:11:40 INFO DiskBlockManager: Created local directory at C:\Users\antoniodavid.moreno\AppData\Local\Temp\blockmgr-8661488f-1c24-4686-908e-1d720d13ef5d
+22/06/08 13:11:40 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+22/06/08 13:11:40 INFO SparkEnv: Registering OutputCommitCoordinator
+22/06/08 13:11:40 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/06/08 13:11:40 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+22/06/08 13:11:41 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://L2204025.mshome.net:4041
+22/06/08 13:11:41 INFO SparkContext: Added JAR file:///C:/Spark3/examples/jars/scopt_2.12-3.7.1.jar at spark://L2204025.mshome.net:53137/jars/scopt_2.12-3.7.1.jar with timestamp 1654686699498
+22/06/08 13:11:41 INFO SparkContext: Added JAR file:///C:/Spark3/examples/jars/spark-examples_2.12-3.0.3.jar at spark://L2204025.mshome.net:53137/jars/spark-examples_2.12-3.0.3.jar with timestamp 1654686699498
+22/06/08 13:11:41 INFO Executor: Starting executor ID driver on host L2204025.mshome.net
+22/06/08 13:11:41 INFO Executor: Fetching spark://L2204025.mshome.net:53137/jars/scopt_2.12-3.7.1.jar with timestamp 1654686699498
+22/06/08 13:11:41 INFO TransportClientFactory: Successfully created connection to L2204025.mshome.net/172.18.112.1:53137 after 32 ms (0 ms spent in bootstraps)
+22/06/08 13:11:41 INFO Utils: Fetching spark://L2204025.mshome.net:53137/jars/scopt_2.12-3.7.1.jar to C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806\fetchFileTemp3932082429052680117.tmp
+22/06/08 13:11:41 INFO Executor: Adding file:/C:/Users/antoniodavid.moreno/AppData/Local/Temp/spark-e2edb716-756f-490d-8aa8-909101f884e5/userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806/scopt_2.12-3.7.1.jar to class loader
+22/06/08 13:11:41 INFO Executor: Fetching spark://L2204025.mshome.net:53137/jars/spark-examples_2.12-3.0.3.jar with timestamp 1654686699498
+22/06/08 13:11:41 INFO Utils: Fetching spark://L2204025.mshome.net:53137/jars/spark-examples_2.12-3.0.3.jar to C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806\fetchFileTemp6172439734101650696.tmp
+22/06/08 13:11:41 INFO Executor: Adding file:/C:/Users/antoniodavid.moreno/AppData/Local/Temp/spark-e2edb716-756f-490d-8aa8-909101f884e5/userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806/spark-examples_2.12-3.0.3.jar to class loader
+22/06/08 13:11:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53187.
+22/06/08 13:11:41 INFO NettyBlockTransferService: Server created on L2204025.mshome.net:53187
+22/06/08 13:11:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/06/08 13:11:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, L2204025.mshome.net, 53187, None)
+22/06/08 13:11:41 INFO BlockManagerMasterEndpoint: Registering block manager L2204025.mshome.net:53187 with 366.3 MiB RAM, BlockManagerId(driver, L2204025.mshome.net, 53187, None)
+22/06/08 13:11:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, L2204025.mshome.net, 53187, None)
+22/06/08 13:11:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, L2204025.mshome.net, 53187, None)
+22/06/08 13:11:41 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Users/antoniodavid.moreno/spark-warehouse').
+22/06/08 13:11:41 INFO SharedState: Warehouse path is 'file:/C:/Users/antoniodavid.moreno/spark-warehouse'.
+22/06/08 13:11:42 INFO InMemoryFileIndex: It took 30 ms to list leaf files for 1 paths.
+22/06/08 13:11:44 INFO FileSourceStrategy: Pushed Filters:
+22/06/08 13:11:44 INFO FileSourceStrategy: Post-Scan Filters:
+22/06/08 13:11:44 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+22/06/08 13:11:45 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 285.9 KiB, free 366.0 MiB)
+22/06/08 13:11:45 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 24.0 KiB, free 366.0 MiB)
+22/06/08 13:11:45 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on L2204025.mshome.net:53187 (size: 24.0 KiB, free: 366.3 MiB)
+22/06/08 13:11:45 INFO SparkContext: Created broadcast 0 from javaRDD at JavaWordCount.java:45
+22/06/08 13:11:45 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/06/08 13:11:45 INFO SparkContext: Starting job: collect at JavaWordCount.java:53
+22/06/08 13:11:45 INFO DAGScheduler: Registering RDD 6 (mapToPair at JavaWordCount.java:49) as input to shuffle 0
+22/06/08 13:11:45 INFO DAGScheduler: Got job 0 (collect at JavaWordCount.java:53) with 1 output partitions
+22/06/08 13:11:45 INFO DAGScheduler: Final stage: ResultStage 1 (collect at JavaWordCount.java:53)
+22/06/08 13:11:45 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+22/06/08 13:11:45 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+22/06/08 13:11:45 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[6] at mapToPair at JavaWordCount.java:49), which has no missing parents
+22/06/08 13:11:45 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 14.5 KiB, free 366.0 MiB)
+22/06/08 13:11:45 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.2 KiB, free 366.0 MiB)
+22/06/08 13:11:45 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on L2204025.mshome.net:53187 (size: 7.2 KiB, free: 366.3 MiB)
+22/06/08 13:11:45 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1223
+22/06/08 13:11:45 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[6] at mapToPair at JavaWordCount.java:49) (first 15 tasks are for partitions Vector(0))
+22/06/08 13:11:45 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+22/06/08 13:11:45 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, L2204025.mshome.net, executor driver, partition 0, PROCESS_LOCAL, 7713 bytes)
+22/06/08 13:11:45 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+22/06/08 13:11:46 INFO CodeGenerator: Code generated in 206.6471 ms
+22/06/08 13:11:46 INFO FileScanRDD: Reading File path: file:///C:/Spark3/README.md, range: 0-4488, partition values: [empty row]
+22/06/08 13:11:46 INFO CodeGenerator: Code generated in 10.4092 ms
+22/06/08 13:11:46 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1843 bytes result sent to driver
+22/06/08 13:11:46 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 919 ms on L2204025.mshome.net (executor driver) (1/1)
+22/06/08 13:11:46 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+22/06/08 13:11:46 INFO DAGScheduler: ShuffleMapStage 0 (mapToPair at JavaWordCount.java:49) finished in 1,123 s
+22/06/08 13:11:46 INFO DAGScheduler: looking for newly runnable stages
+22/06/08 13:11:46 INFO DAGScheduler: running: Set()
+22/06/08 13:11:46 INFO DAGScheduler: waiting: Set(ResultStage 1)
+22/06/08 13:11:46 INFO DAGScheduler: failed: Set()
+22/06/08 13:11:46 INFO DAGScheduler: Submitting ResultStage 1 (ShuffledRDD[7] at reduceByKey at JavaWordCount.java:51), which has no missing parents
+22/06/08 13:11:46 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.3 KiB, free 366.0 MiB)
+22/06/08 13:11:46 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.4 KiB, free 366.0 MiB)
+22/06/08 13:11:46 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on L2204025.mshome.net:53187 (size: 2.4 KiB, free: 366.3 MiB)
+22/06/08 13:11:46 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1223
+22/06/08 13:11:46 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[7] at reduceByKey at JavaWordCount.java:51) (first 15 tasks are for partitions Vector(0))
+22/06/08 13:11:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+22/06/08 13:11:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, L2204025.mshome.net, executor driver, partition 0, NODE_LOCAL, 7143 bytes)
+22/06/08 13:11:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+22/06/08 13:11:46 INFO ShuffleBlockFetcherIterator: Getting 1 (3.5 KiB) non-empty blocks including 1 (3.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) remote blocks
+22/06/08 13:11:46 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+22/06/08 13:11:46 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 8728 bytes result sent to driver
+22/06/08 13:11:46 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 136 ms on L2204025.mshome.net (executor driver) (1/1)
+22/06/08 13:11:46 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+22/06/08 13:11:46 INFO DAGScheduler: ResultStage 1 (collect at JavaWordCount.java:53) finished in 0,179 s
+22/06/08 13:11:46 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+22/06/08 13:11:46 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+22/06/08 13:11:46 INFO DAGScheduler: Job 0 finished: collect at JavaWordCount.java:53, took 1,411937 s
+package: 1
+For: 3
+Programs: 1
+processing.: 2
+Because: 1
+The: 1
+cluster.: 1
+its: 1
+[run: 1
+APIs: 1
+have: 1
+Try: 1
+computation: 1
+through: 1
+several: 1
+This: 2
+graph: 1
+Hive: 2
+storage: 1
+["Specifying: 1
+To: 2
+"yarn": 1
+Once: 1
+["Useful: 1
+1,000,000,000:: 2
+prefer: 1
+SparkPi: 2
+engine: 2
+version: 1
+file: 1
+documentation,: 1
+processing,: 1
+the: 23
+are: 1
+systems.: 1
+params: 1
+not: 1
+different: 1
+refer: 2
+Interactive: 2
+R,: 1
+given.: 1
+if: 4
+build: 3
+when: 1
+be: 2
+Coverage](https://img.shields.io/badge/dynamic/xml.svg?label=pyspark%20coverage&url=https%3A%2F%2Fspark-test.github.io%2Fpyspark-coverage-site&query=%2Fhtml%2Fbody%2Fdiv%5B1%5D%2Fdiv%2Fh1%2Fspan&colorB=brightgreen&style=plastic)](https://spark-test.github.io/pyspark-coverage-site): 1
+Tests: 1
+Apache: 1
+Maven](https://maven.apache.org/).: 1
+./bin/run-example: 2
+guide](https://spark.apache.org/contributing.html): 1
+including: 4
+Spark.: 1
+package.: 1
+programs,: 1
+1000).count(): 2
+Versions: 1
+HDFS: 1
+>>>: 1
+programming: 1
+Testing: 1
+module,: 1
+Streaming: 1
+environment: 1
+run:: 1
+test,: 1
+clean: 1
+Developer: 1
+rich: 1
+Version: 1
+GraphX: 1
+Guide](https://spark.apache.org/docs/latest/configuration.html): 1
+Please: 4
+is: 7
+Build](https://img.shields.io/appveyor/ci/ApacheSoftwareFoundation/spark/master.svg?style=plastic&logo=appveyor)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/spark): 1
+run: 7
+URL,: 1
+threads.: 1
+same: 1
+MASTER=spark://host:7077: 1
+on: 7
+built: 1
+against: 1
+[Apache: 1
+tests: 2
+examples: 2
+Structured: 1
+at: 2
+optimized: 1
+usage: 1
+development: 1
+Tools"](https://spark.apache.org/developer-tools.html).: 1
+graphs: 1
+talk: 1
+Shell: 2
+class: 2
+Enabling: 1
+abbreviated: 1
+using: 3
+directory.: 1
+README: 1
+overview: 1
+`examples`: 2
+example:: 1
+##: 9
+N: 1
+set: 2
+use: 3
+Hadoop-supported: 1
+[![AppVeyor: 1
+page](https://spark.apache.org/documentation.html).: 1
+running: 1
+find: 1
+Build](https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-sbt-hadoop-2.7-hive-2.3/badge/icon)](https://amplab.cs.berkeley.edu/jenkins/job/spark-master-test-sbt-hadoop-2.7-hive-2.3): 1
+contains: 1
+project: 1
+Pi: 1
+need: 1
+or: 3
+1000: 2
+high-level: 1
+Java,: 1
+uses: 1
+<class>: 1
+Spark"](https://spark.apache.org/docs/latest/building-spark.html).: 1
+Hadoop,: 2
+available: 1
+requires: 1
+(You: 1
+see: 3
+Documentation: 1
+of: 5
+tools: 1
+using:: 1
+cluster: 1
+must: 1
+unified: 1
+supports: 2
+built,: 1
+Hadoop: 3
+this: 1
+particular: 2
+integration: 1
+Python: 2
+Spark: 14
+There: 1
+general: 2
+YARN,: 1
+pre-built: 1
+[Configuration: 1
+locally: 2
+library: 1
+A: 1
+locally.: 1
+#: 1
+only: 1
+Configuration: 1
+following: 2
+basic: 1
+first: 1
+changed: 1
+More: 1
+which: 2
+learning,: 1
+./bin/pyspark: 1
+also: 5
+info: 1
+should: 2
+for: 12
+[params]`.: 1
+documentation: 3
+[project: 1
+mesos://: 1
+setup: 1
+latest: 1
+your: 1
+MASTER: 1
+example: 3
+spark.range(1000: 2
+scala>: 1
+DataFrames,: 1
+provides: 1
+configure: 1
+distributions.: 1
+can: 6
+About: 1
+instructions.: 1
+do: 2
+easiest: 1
+no: 1
+project.: 1
+how: 3
+`./bin/run-example: 1
+large-scale: 1
+./build/mvn: 1
+started: 1
+Note: 1
+individual: 1
+spark://: 1
+It: 2
+tips,: 1
+Scala: 2
+Alternatively,: 1
+an: 4
+variable: 1
+submit: 1
+machine: 1
+thread,: 1
+them,: 1
+detailed: 2
+stream: 1
+And: 1
+distribution: 1
+review: 1
+return: 2
+<https://spark.apache.org/>: 1
+Thriftserver: 1
+developing: 1
+./bin/spark-shell: 1
+YARN"](https://spark.apache.org/docs/latest/building-spark.html#specifying-the-hadoop-version-and-enabling-yarn): 1
+"local": 1
+You: 3
+start: 1
+Spark](#building-spark).: 1
+one: 2
+help: 1
+with: 3
+print: 1
+data: 2
+Kubernetes: 1
+Contributing: 1
+in: 5
+-DskipTests: 1
+downloaded: 1
+versions: 1
+online: 1
+comes: 1
+[building: 1
+Python,: 2
+Many: 1
+building: 2
+Running: 1
+from: 1
+way: 1
+Online: 1
+[![PySpark: 1
+site,: 1
+other: 1
+Example: 1
+[Contribution: 1
+analysis.: 1
+tests](https://spark.apache.org/developer-tools.html#individual-tests).: 1
+you: 4
+runs.: 1
+Building: 1
+higher-level: 1
+protocols: 1
+guidance: 2
+a: 9
+guide,: 1
+name: 1
+that: 2
+SQL: 2
+will: 1
+instance:: 1
+IDE,: 1
+to: 16
+[![Jenkins: 1
+analytics: 1
+: 73
+core: 1
+get: 1
+*: 4
+web: 1
+resource-managers/kubernetes/integration-tests/README.md: 1
+"local[N]": 1
+information: 1
+programs: 2
+package.): 1
+MLlib: 1
+["Building: 1
+contributing: 1
+shell:: 2
+Scala,: 1
+and: 9
+command,: 2
+./dev/run-tests: 1
+sample: 1
+22/06/08 13:11:47 INFO SparkUI: Stopped Spark web UI at http://L2204025.mshome.net:4041
+22/06/08 13:11:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/06/08 13:11:47 INFO MemoryStore: MemoryStore cleared
+22/06/08 13:11:47 INFO BlockManager: BlockManager stopped
+22/06/08 13:11:47 INFO BlockManagerMaster: BlockManagerMaster stopped
+22/06/08 13:11:47 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/06/08 13:11:47 WARN SparkEnv: Exception while deleting Spark temp dir: C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806
+java.io.IOException: Failed to delete: C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806\spark-examples_2.12-3.0.3.jar
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:144)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:91)
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1079)
+        at org.apache.spark.SparkEnv.stop(SparkEnv.scala:105)
+        at org.apache.spark.SparkContext.$anonfun$stop$23(SparkContext.scala:2027)
+        at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1357)
+        at org.apache.spark.SparkContext.stop(SparkContext.scala:2027)
+        at org.apache.spark.sql.SparkSession.stop(SparkSession.scala:703)
+        at org.apache.spark.examples.JavaWordCount.main(JavaWordCount.java:57)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+        at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:928)
+        at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+        at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+        at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+        at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1007)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1016)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+22/06/08 13:11:47 INFO SparkContext: Successfully stopped SparkContext
+22/06/08 13:11:47 INFO ShutdownHookManager: Shutdown hook called
+22/06/08 13:11:47 INFO ShutdownHookManager: Deleting directory C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806
+22/06/08 13:11:47 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806
+java.io.IOException: Failed to delete: C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806\spark-examples_2.12-3.0.3.jar
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:144)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:91)
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1079)
+        at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+        at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+        at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+        at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+        at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+        at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+        at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1934)
+        at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+        at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+        at scala.util.Try$.apply(Try.scala:213)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+22/06/08 13:11:47 INFO ShutdownHookManager: Deleting directory C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5
+22/06/08 13:11:47 ERROR ShutdownHookManager: Exception while deleting Spark temp dir: C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5
+java.io.IOException: Failed to delete: C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-e2edb716-756f-490d-8aa8-909101f884e5\userFiles-531d77a7-e407-45d9-a993-6d3c2ef05806\spark-examples_2.12-3.0.3.jar
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:144)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:128)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:118)
+        at org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:91)
+        at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1079)
+        at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4(ShutdownHookManager.scala:65)
+        at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$4$adapted(ShutdownHookManager.scala:62)
+        at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+        at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+        at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+        at org.apache.spark.util.ShutdownHookManager$.$anonfun$new$2(ShutdownHookManager.scala:62)
+        at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+        at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+        at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+        at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1934)
+        at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+        at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+        at scala.util.Try$.apply(Try.scala:213)
+        at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+        at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+        at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+22/06/08 13:11:47 INFO ShutdownHookManager: Deleting directory C:\Users\antoniodavid.moreno\AppData\Local\Temp\spark-982b465a-1b0c-4c42-bee3-ff914b2dff8b
