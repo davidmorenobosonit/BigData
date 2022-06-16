@@ -5,7 +5,7 @@ import org.apache.spark.sql.functions.{col, count, desc}
 /**
  * @author ${user.name}
  */
-
+// PRUEBA GIT
 object App2 {
   def main(args: Array[String]) {
     val spark: SparkSession = SparkSession.builder().master("local[1]")
