@@ -1,7 +1,5 @@
 # BigData
 
-aaaaaaaaaaaaaaaaaaa
+Formación Bosonit
 
-bbbbbbbbbbbbbbbbbbb
-
-ccccc
+Objetivo: certificación Spark 3

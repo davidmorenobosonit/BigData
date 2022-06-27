@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="Maven 1" modules="ProyectoIntelliJ">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="C:\Users\antoniodavid.moreno\Desktop\BigData\Spark\Chapter2\ProyectoIntelliJ\target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 2" modules="ProyectoIntelliJ3">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="C:\Users\antoniodavid.moreno\Desktop\BigData\Spark\Chapter3\ProyectoIntelliJ3\target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 3" modules="ProyectoIntelliJ4">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="C:\Users\antoniodavid.moreno\Desktop\BosonitBD\Spark\BigData\FormacionSpark\Chapter5\ProyectoIntelliJ4\target/.scala_dependencies" />
+      </parameters>
+    </profile>
+    <profile name="Maven 4" modules="ProyectoIntelliJ5">
+      <parameters>
+        <parameter value="-dependencyfile" />
+        <parameter value="C:\Users\antoniodavid.moreno\Desktop\BosonitBD\Spark\BigData\FormacionSpark\Chapter5\ProyectoIntelliJ5\target/.scala_dependencies" />
+      </parameters>
+    </profile>
+  </component>
+</project>

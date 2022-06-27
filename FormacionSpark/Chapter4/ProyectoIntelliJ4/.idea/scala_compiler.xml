@@ -16,7 +16,7 @@
     <profile name="Maven 3" modules="ProyectoIntelliJ4">
       <parameters>
         <parameter value="-dependencyfile" />
-        <parameter value="C:\Users\antoniodavid.moreno\Desktop\BigData\Spark\Chapter4\ProyectoIntelliJ4\target/.scala_dependencies" />
+        <parameter value="C:\Users\antoniodavid.moreno\Desktop\BosonitBD\Spark\BigData\FormacionSpark\Chapter4\ProyectoIntelliJ4\target/.scala_dependencies" />
       </parameters>
     </profile>
   </component>
